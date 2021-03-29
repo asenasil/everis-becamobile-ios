@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import CoreData
 
 class FilmesAPI: NSObject {
 
@@ -19,7 +20,7 @@ class FilmesAPI: NSObject {
     init(_ chave:String) {
         self.minhaApiKey = chave
     }
-    
+
     // MARK - GET
     func puxaFilmes(acabou: @escaping(_ listaDeFilme: [[String:Any]]) -> Void){
         
@@ -40,7 +41,6 @@ class FilmesAPI: NSObject {
         }
     }
   }
-    
     // MARK mostra Imagens
     
     func mostraImagens(acabou: @escaping(_ listandoFilmes: [[String:Any]]) ->Void){
@@ -96,5 +96,5 @@ class FilmesAPI: NSObject {
             }
             
         }
-}
+    }
 }

@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class ViewController: UIViewController, UICollectionViewDataSource{
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
     // Variaveis Globais
     let filmesViewControl:FilmesAPI = FilmesAPI("4f67d4725088eb6ab226f2ca2c1d8902")
@@ -18,10 +18,10 @@ class ViewController: UIViewController, UICollectionViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mostraFilmesCartaz.delegate = self
         mostraFilmesCartaz.dataSource = self
         exibiFilmes()
-        
-   
+
     }
     @IBOutlet weak var mostraFilmesCartaz: UICollectionView!
     
@@ -40,7 +40,7 @@ class ViewController: UIViewController, UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let campoFilmes = collectionView.dequeueReusableCell(withReuseIdentifier: "campoFilmes", for: indexPath) as! MostrarFilmesCartazCollectionViewCell
+       let campoFilmes = collectionView.dequeueReusableCell(withReuseIdentifier: "campoFilmes", for: indexPath) as! MostrarFilmesCartazCollectionViewCell
         let escolheFilme = self.todosFilmesViewControl[indexPath.item]
         guard let capaCartaz = escolheFilme["imagem"] as? UIImage else{
             return campoFilmes
@@ -53,8 +53,5 @@ class ViewController: UIViewController, UICollectionViewDataSource{
         
         return campoFilmes
     }
-    
-    
-    
 }
 
