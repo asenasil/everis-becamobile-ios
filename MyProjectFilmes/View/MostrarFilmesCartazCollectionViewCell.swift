@@ -1,8 +1,7 @@
 
 
 import UIKit
-import Alamofire
-import AlamofireImage
+
 
 class MostrarFilmesCartazCollectionViewCell: UICollectionViewCell {
     
