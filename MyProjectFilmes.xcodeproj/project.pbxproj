@@ -18,6 +18,7 @@
 		AAE153A526121BD300D5E45F /* DetalheFilmesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE153A426121BD300D5E45F /* DetalheFilmesViewController.swift */; };
 		AAF7107C2613A857007A0763 /* FilmesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7107B2613A857007A0763 /* FilmesAPI.swift */; };
 		AAF7107E2613A8CF007A0763 /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7107D2613A8CF007A0763 /* Filme.swift */; };
+		AAF710802613A946007A0763 /* ResultadosFilmes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7107F2613A946007A0763 /* ResultadosFilmes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		AAE153A426121BD300D5E45F /* DetalheFilmesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheFilmesViewController.swift; sourceTree = "<group>"; };
 		AAF7107B2613A857007A0763 /* FilmesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesAPI.swift; sourceTree = "<group>"; };
 		AAF7107D2613A8CF007A0763 /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
+		AAF7107F2613A946007A0763 /* ResultadosFilmes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadosFilmes.swift; sourceTree = "<group>"; };
 		E3DB1A7F95FE2C739C467211 /* Pods_MyProjectFilmesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectFilmesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38A08D319C68631826142D4 /* Pods_MyProjectFilmes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProjectFilmes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF51A581A7ADA5F50C6C951 /* Pods-MyProjectFilmes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectFilmes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectFilmes/Pods-MyProjectFilmes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				AAF7107D2613A8CF007A0763 /* Filme.swift */,
+				AAF7107F2613A946007A0763 /* ResultadosFilmes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				AA8A6902260E1AEB00783916 /* ViewController.swift in Sources */,
 				AAF7107E2613A8CF007A0763 /* Filme.swift in Sources */,
+				AAF710802613A946007A0763 /* ResultadosFilmes.swift in Sources */,
 				AAE153A526121BD300D5E45F /* DetalheFilmesViewController.swift in Sources */,
 				AAF7107C2613A857007A0763 /* FilmesAPI.swift in Sources */,
 				AA6A8990260F59900061E0C6 /* MostrarFilmesCartazCollectionViewCell.swift in Sources */,
