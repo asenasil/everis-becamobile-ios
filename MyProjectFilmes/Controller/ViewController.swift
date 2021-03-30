@@ -18,8 +18,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mostraFilmesCartaz.delegate = self
         mostraFilmesCartaz.dataSource = self
+        mostraFilmesCartaz.delegate = self
         exibiFilmes()
 
     }
@@ -34,6 +34,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
         }
     }
+    //Funcoes do Data Source
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.todosFilmesViewControl.count
@@ -41,6 +42,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        let campoFilmes = collectionView.dequeueReusableCell(withReuseIdentifier: "campoFilmes", for: indexPath) as! MostrarFilmesCartazCollectionViewCell
+        
         let escolheFilme = self.todosFilmesViewControl[indexPath.item]
         guard let capaCartaz = escolheFilme["imagem"] as? UIImage else{
             return campoFilmes
@@ -53,5 +55,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         return campoFilmes
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detalheDoFilme = self.todosFilmesViewControl[indexPath.item]
+        let meuStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let controllerDetalhes = meuStoryBoard.instantiateViewController(withIdentifier: "filmeDetalhes") as! DetalheFilmesViewController
+        
+        controllerDetalhes.meuFilme = detalheDoFilme
+        
+        self.present(controllerDetalhes, animated: true, completion: nil)
+    }
+    
 }
 
