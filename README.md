@@ -10,4 +10,4 @@ chamando as API.
 
 3 - Na parte de layouts eu nao consegui implementar do jeito que queria, trazendo um Strack View e colocando uma ScrowView para a label sinopse.
 
-4 - Tive dificuldade para implementar alguns testes, nao tive noção como criar os testes para as minhas classes visto que nao tem metodos que façam if.
+4 - Tive dificuldade para implementar alguns testes, nao tive noção como criar os testes para as minhas classes visto que nao tem metodos que façam "if".
