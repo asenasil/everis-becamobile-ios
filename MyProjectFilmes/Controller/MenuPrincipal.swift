@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-class MenuPrincipal: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class MenuPrincipal: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     // Variaveis Globais
     var idFilmeEscolhido = 1
@@ -21,6 +21,7 @@ class MenuPrincipal: UIViewController, UICollectionViewDataSource, UICollectionV
         super.viewDidLoad()
         mostraFilmesCartaz.dataSource = self
         mostraFilmesCartaz.delegate = self
+        
         listaFilmes = filmesApi.requisicao()
     }
     
@@ -43,6 +44,14 @@ class MenuPrincipal: UIViewController, UICollectionViewDataSource, UICollectionV
         
         campoFilmes.imagemDoFilme.af_setImage(withURL: urlCartaz!)
         
+        campoFilmes.imagemDoFilme.layer.borderWidth = 0.5
+        campoFilmes.imagemDoFilme.layer.borderColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor
+        campoFilmes.imagemDoFilme.layer.cornerRadius = 8
+        
+        
+//        campoFilmes.imagemDoFilme.layer.cornerRadius = 2
+//        campoFilmes.imagemDoFilme.layer.masksToBounds = true
+        
         return campoFilmes
     }
     
@@ -51,11 +60,19 @@ class MenuPrincipal: UIViewController, UICollectionViewDataSource, UICollectionV
 
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layoutcollectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        let larguraCelula = collectionView.bounds.width / 2
+        return CGSize(width: larguraCelula - 10, height: 160)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let telaDetalhes = segue.destination as? DetalheFilmesViewController{
             
             telaDetalhes.menuPrincipalViewController = self
         }
+  
     }
     
 }

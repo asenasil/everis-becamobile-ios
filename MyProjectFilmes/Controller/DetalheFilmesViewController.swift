@@ -24,12 +24,10 @@ class DetalheFilmesViewController: UIViewController, UINavigationControllerDeleg
     
     let filmesInformacoesAPI = FilmesInformacoesAPI()
     var menuPrincipalViewController: MenuPrincipal?
-    
-    
-    
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         guard let idFilmeSelecionado = menuPrincipalViewController?.idFilmeEscolhido else{return}
         
@@ -38,20 +36,19 @@ class DetalheFilmesViewController: UIViewController, UINavigationControllerDeleg
         tituloDetalhes.text = informacaoFilmeSelecionado.originalTitle
         sinopseDetalhes.text = informacaoFilmeSelecionado.overview
         lancamentoDetalhes.text = "\(informacaoFilmeSelecionado.voteAverage)"
-        
-//        self.scrollview.contentSize = CGSize(width: self.scrollview.frame.width, height: self.scrollview.frame.height + 320)
-        
-        
+
         
         let urlCartaz = URL(string: "https://image.tmdb.org/t/p/w300/\(informacaoFilmeSelecionado.backdropPath)")
         
+        
+        
         imagemDetalhes.af_setImage(withURL: urlCartaz!)
         
-        
+        imagemDetalhes.layer.cornerRadius = 10
+        imagemDetalhes.layer.masksToBounds = true
+         
         
     }
-    
-    
-    
+
     
 }

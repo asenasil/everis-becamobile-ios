@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		97358ABA1A965E360972AA80 /* Pods_MyProjectFilmes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38A08D319C68631826142D4 /* Pods_MyProjectFilmes.framework */; };
+		AA2091E12614CD2300A4D371 /* FilmesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2091E02614CD2300A4D371 /* FilmesAPITests.swift */; };
+		AA2091E42614CE5200A4D371 /* TestsFilmesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2091E32614CE5200A4D371 /* TestsFilmesApi.swift */; };
+		AA2091E62614DF6E00A4D371 /* TestsFilmesInformacoesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2091E52614DF6E00A4D371 /* TestsFilmesInformacoesApi.swift */; };
 		AA6A8990260F59900061E0C6 /* MostrarFilmesCartazCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6A898F260F59900061E0C6 /* MostrarFilmesCartazCollectionViewCell.swift */; };
 		AA8A6900260E1AEB00783916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A68FF260E1AEB00783916 /* AppDelegate.swift */; };
 		AA8A6902260E1AEB00783916 /* MenuPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8A6901260E1AEB00783916 /* MenuPrincipal.swift */; };
@@ -35,6 +38,9 @@
 
 /* Begin PBXFileReference section */
 		341BAA599A771C2FB8E77380 /* Pods-MyProjectFilmes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProjectFilmes.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyProjectFilmes/Pods-MyProjectFilmes.release.xcconfig"; sourceTree = "<group>"; };
+		AA2091E02614CD2300A4D371 /* FilmesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesAPITests.swift; sourceTree = "<group>"; };
+		AA2091E32614CE5200A4D371 /* TestsFilmesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsFilmesApi.swift; sourceTree = "<group>"; };
+		AA2091E52614DF6E00A4D371 /* TestsFilmesInformacoesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsFilmesInformacoesApi.swift; sourceTree = "<group>"; };
 		AA6A898F260F59900061E0C6 /* MostrarFilmesCartazCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostrarFilmesCartazCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA8A68FC260E1AEB00783916 /* MyProjectFilmes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProjectFilmes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8A68FF260E1AEB00783916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +100,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AA2091E22614CE1D00A4D371 /* FilmeTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA2091E32614CE5200A4D371 /* TestsFilmesApi.swift */,
+				AA2091E52614DF6E00A4D371 /* TestsFilmesInformacoesApi.swift */,
+			);
+			path = FilmeTests;
+			sourceTree = "<group>";
+		};
 		AA6A8991260F6E6A0061E0C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +158,7 @@
 				AA8A6906260E1AEC00783916 /* Assets.xcassets */,
 				AA8A6908260E1AEC00783916 /* LaunchScreen.storyboard */,
 				AA8A690B260E1AEC00783916 /* Info.plist */,
+				AA2091E22614CE1D00A4D371 /* FilmeTests */,
 			);
 			path = MyProjectFilmes;
 			sourceTree = "<group>";
@@ -152,6 +168,7 @@
 			children = (
 				AA8A6914260E1AED00783916 /* MyProjectFilmesUITests.swift */,
 				AA8A6916260E1AED00783916 /* Info.plist */,
+				AA2091E02614CD2300A4D371 /* FilmesAPITests.swift */,
 			);
 			path = MyProjectFilmesUITests;
 			sourceTree = "<group>";
@@ -335,6 +352,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2091E12614CD2300A4D371 /* FilmesAPITests.swift in Sources */,
+				AA2091E62614DF6E00A4D371 /* TestsFilmesInformacoesApi.swift in Sources */,
+				AA2091E42614CE5200A4D371 /* TestsFilmesApi.swift in Sources */,
 				AA8A6915260E1AED00783916 /* MyProjectFilmesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
