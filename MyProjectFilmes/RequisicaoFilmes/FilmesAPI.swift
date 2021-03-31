@@ -11,8 +11,7 @@ class FilmesAPI {
             if let dadosUrlDosFilmes = try? Data(contentsOf: urlDosFilmes){
                 let decodificador = JSONDecoder()
                 if let resultadosFilmes = try? decodificador.decode(ResultadosFilmes.self, from: dadosUrlDosFilmes){
-                    print("VOCE VAI CONSEGUIR, ACREDITE EM DEUS")
-                    print(resultadosFilmes)
+ 
                     return resultadosFilmes.results
                 }
             }

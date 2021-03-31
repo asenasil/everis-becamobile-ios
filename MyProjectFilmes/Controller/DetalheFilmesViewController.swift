@@ -10,8 +10,8 @@ import UIKit
 
 class DetalheFilmesViewController: UIViewController, UINavigationControllerDelegate {
     
-    @IBOutlet weak var scrollview: UIStackView!
     
+
     @IBOutlet weak var tituloDetalhes: UILabel!
     
     @IBOutlet weak var imagemDetalhes: UIImageView!
@@ -39,7 +39,8 @@ class DetalheFilmesViewController: UIViewController, UINavigationControllerDeleg
         sinopseDetalhes.text = informacaoFilmeSelecionado.overview
         lancamentoDetalhes.text = "\(informacaoFilmeSelecionado.voteAverage)"
         
-        //self.scrollview.contentSize = CGSize(width: self.scrollview.frame.width, height: self.scrollview.frame.height + 320)
+//        self.scrollview.contentSize = CGSize(width: self.scrollview.frame.width, height: self.scrollview.frame.height + 320)
+        
         
         
         let urlCartaz = URL(string: "https://image.tmdb.org/t/p/w300/\(informacaoFilmeSelecionado.backdropPath)")
